@@ -28,53 +28,11 @@ namespace DocRW
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        /*
-                        Console.WriteLine("Введите шаблон (1 - Заявление на отпуск; 2 - Квитанция)");
-                        string fileTemplate = Console.ReadLine();
-
-                        Console.WriteLine("");
-
-                        Console.WriteLine("Введите полный путь файла:");
-                        string fileFullInputPath = Console.ReadLine();
-                        documentProcessor.LoadDocument(fileFullInputPath, fileTemplate);
-                        logger.Log($"Шаблон загружен: {fileFullInputPath}");
-
-                        Console.WriteLine("Заполняемые поля:");
-                        var fields = documentProcessor.GetFillableFields();
-
-                        var fieldValues = new Dictionary<string, string>();
-                        foreach (var field in fields)
-                        {
-                            Console.WriteLine($"Введите значение для {field}:");
-                            fieldValues[field] = Console.ReadLine();
-                        }
-
-                        documentProcessor.FillTemplate(fieldValues);
-                        logger.Log("Шаблон заполнен.");
-
-                        Console.WriteLine("Введите путь для сохранения документа:");
-                        string fileFullOutputPath = documentProcessor.SaveDocument(Console.ReadLine());
-                        logger.Log($"Документ сохранен: {fileFullOutputPath}");
-
-                        Console.WriteLine("Отправить документ по электронной почте? (да/нет):");
-                        if (Console.ReadLine().ToLower() == "да")
-                        {
-                            Console.WriteLine("Введите email получателя:");
-                            string recipientEmail = Console.ReadLine();
-
-                            Console.WriteLine("Введите email отправителя:");
-                            string senderEmail = Console.ReadLine();
-
-                            emailSender.SendEmail(recipientEmail, senderEmail, documentProcessor.fileTemplate, fileFullOutputPath);
-                            logger.Log($"Документ отправлен на: {recipientEmail}");
-                        }
-                        */
                         ProcessDocumentTemplate();
                         break;
 
                     case "2":
                         ProcessLogs();
-                        logger.ShowLogs();
                         break;
 
                     case "0":
